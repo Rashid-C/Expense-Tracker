@@ -3,5 +3,5 @@ from .views import ExpenseListCreateView
 
 
 urlpatterns = [
-    path('expenses/', ExpenseListCreateView(),name='expense-list-create')
+    path('expenses/', ExpenseListCreateView.as_view(),name='expense-list-create')
 ]
