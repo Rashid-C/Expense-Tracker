@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'django_filters',
+    'corsheaders',
 
   #local app
     'apps.expenses',
@@ -34,6 +35,7 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -132,3 +134,5 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
 }
 
+
+CORS_ALLOW_ALL_ORIGINS = True
